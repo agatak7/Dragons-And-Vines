@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DRAGONS AND VINES</title>
+        <link rel="stylesheet" href="stylesheets/splash.css">
+    </head>
+    <body background="images/patis-1180429-1600x1200.jpg" onload="checkCookie()">
+        <main>
+             <audio id="my_audio" src="images/welcome.mp3" loop="loop"></audio>
+            <img src="images/logo.png" id="logo"></img>
+            <section id="left">
+                <div id="message">
+                    <h2>Welcome to the game! It is a version of "Snakes and Ladders"</br>
+                    You and your opponent roll the dice and move on the board </br>
+                    Whoever gets to the castle first wins!</br>
+                    Vines will help you move up, but watch out for Dragons, which take you down!
+                </h2></div>
+                <!-- <div id="audio" onload="playS()"> -->
+                <div id="visits"></div>
+                <div id ="stats">
+                    <h3><%= gamesInitialized %> 
+                        <%if (gamesInitialized != 1) { %>
+                            games
+                        <% } else { %>
+                            game
+                        <% } %>initialized
+                    </h3>
+                    <h3>
+                        <%= gamesCompleted %> 
+                        completed 
+                    </h3>
+                    <h3>
+                        <%= gamesAborted %> 
+                        aborted
+                    </h3>
+                </div>
+            </section>
+            <section id="right">
+                &nbsp;
+            </section>
+                    <form action="/play" method="get">
+                            <button type="submit" class="button">START GAME!</button>
+                    </form>
+
+            <img src="images/dragonv.png" id="graphic">
+        </main>
+       
+        <script src="javascripts/logger.js"></script>
+    </body>
+</html>
