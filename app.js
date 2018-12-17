@@ -24,8 +24,7 @@ app.get("/", (req, res) => {
 });
 
 //app.get('/', indexRouter);
-http.createServer(app).listen(process.env.PORT || 3000);
-var server = http.createServer(app);
+var server = http.createServer(app).listen(process.env.PORT || 3000);
 const wss = new websocket.Server({ server });
 var websockets = {};//property: websocket, value: game
 
